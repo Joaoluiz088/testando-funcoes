@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBO Layout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1>HBO</h1>
+        <button class="login-btn">Login</button>
+    </nav>
+    <div class="banner">
+        <img id="banner-img" src="https://via.placeholder.com/800x400" alt="Banner">
+        <div class="banner-content">
+            <h2 id="banner-title">Game of Thrones</h2>
+            <button class="watch-btn">Assistir Agora</button>
+        </div>
+        <button class="prev-btn" onclick="prevSlide()">&#10094;</button>
+        <button class="next-btn" onclick="nextSlide()">&#10095;</button>
+    </div>
+    <div class="movie-list">
+        <img class="movie" onclick="setSlide(0)" src="https://via.placeholder.com/100" alt="Game of Thrones">
+        <img class="movie" onclick="setSlide(1)" src="https://via.placeholder.com/100" alt="Euphoria">
+        <img class="movie" onclick="setSlide(2)" src="https://via.placeholder.com/100" alt="The Last of Us">
+        <img class="movie" onclick="setSlide(3)" src="https://via.placeholder.com/100" alt="House of the Dragon">
+    </div>
+    <script>
+        let index = 0;
+        const movies = [
+            { title: "Game of Thrones", image: "https://via.placeholder.com/800x400" },
+            { title: "Euphoria", image: "https://via.placeholder.com/800x400" },
+            { title: "The Last of Us", image: "https://via.placeholder.com/800x400" },
+            { title: "House of the Dragon", image: "https://via.placeholder.com/800x400" }
+        ];
+        function updateSlide() {
+            document.getElementById("banner-img").src = movies[index].image;
+            document.getElementById("banner-title").innerText = movies[index].title;
+        }
+        function nextSlide() {
+            index = (index + 1) % movies.length;
+            updateSlide();
+        }
+        function prevSlide() {
+            index = (index - 1 + movies.length) % movies.length;
+            updateSlide();
+        }
+        function setSlide(i) {
+            index = i;
+            updateSlide();
+        }
+    </script>
+</body>
+</html>
+
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: #111;
+}
+.login-btn {
+    background: #e50914;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+}
+.banner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.banner-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    text-align: left;
+}
+.watch-btn {
+    background: #e50914;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+}
+.movie-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+.movie {
+    width: 100px;
+    height: 150px;
+    cursor: pointer;
+}
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }

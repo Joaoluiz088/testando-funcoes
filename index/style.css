@@ -1,0 +1,340 @@
+body {
+    background-color: aliceblue;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  #container-lg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: 110px;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+  }
+
+  .menu-icon {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .menu-icon div {
+    width: 28px;
+    height: 4px;
+    background-color: #000;
+    border-radius: 2px;
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    padding: 10px;
+  }
+
+  .dropdown-menu a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    border-radius: 5px;
+  }
+
+  .dropdown-menu a:hover {
+    background-color: #fce220;
+  }
+
+  .logo-name {
+    font-family: 'Georgia', serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-name span {
+    color: #fce220;
+  }
+
+    .button-container {
+        display: flex;
+        gap: 20px;
+        position: absolute; /* ou absolute, dependendo do seu caso */
+        top: 10px; /* distância do topo */
+        right: 20px; /* distância da direita */
+        z-index: 1000; /* para ficar na frente dos outros elementos */
+      }
+      
+    
+
+  .btn-signup, .btn-login {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .btn-signup {
+    background: #fedd4c;
+    color: #333;
+  }
+
+  .btn-signup:hover {
+    background: #e3c644;
+  }
+
+  .btn-login {
+    background: #fedd4c;
+    color: rgb(0, 0, 0);
+  }
+
+  .btn-login:hover {
+    background: #e3c644;
+  }
+
+  .top-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 12px 20px;
+    border: 2px solid #fedd4c;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .icon-search {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fedd4c;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 10px;
+  }
+
+  .icon-search::after {
+    content: "";
+    width: 10px;
+    height: 2px;
+    background-color: #fedd4c;
+    position: absolute;
+    right: -6px;
+    bottom: -3px;
+    transform: rotate(45deg);
+  }
+
+  .search-bar {
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    outline: none;
+    color: #000;
+  }
+
+  
+  h2 {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    text-align: justify;
+}
+
+  .modal-content h2 {
+      margin-top: 0;
+    text-align: center;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.modal-content button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ea1d2c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #d01826;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.close:hover {
+    color: #000;
+}
+.categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  margin: 0px;
+  gap: 5px;
+}
+
+.category-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 35vh;
+  gap: 5px;
+  padding: 0; /* Remove qualquer preenchimento extra */
+  margin: 0; /* Remove qualquer margem extra */
+}
+.category {
+  height: 90px;
+  width: 190px;
+  background-color: #fedd4c;
+  border-radius: 12px;
+  padding: 5px;
+  margin: 0px;
+  border: none;
+  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
+}
+
+
+
+.category-grid > div {
+  #empresas-e-o-titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+  
+  #empresas-e-o-titulo h2 {
+    margin-bottom: 20px;
+}
+  
+  .category-grid {
+    max-width: 800px;
+}
+}
+
+.category:hover {
+  background-color: #fce220;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.category {
+  width: 300px;
+  height: 200px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.Coca {
+    background-image: url('../imagem/coca.png');
+    background-size: cover;
+    background-position: center;
+}
+.Ambev {
+    background-image: url('../imagem/ambev.png');
+    background-size: cover;
+    background-position: center;
+  }
+  .Cacau {
+    background-image: url('../imagem/cacau.png');
+    background-size: cover;
+    background-size: 150px auto; /* 50px de largura e altura automática */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #180d04;
+    transition: transform 0.3s ease;
+}
+.Cacau:hover {
+    background-color: #180d04;
+    transform: scale(1.1);
+}
+.Compesa {
+    background-image: url('../imagem/compesa.png');
+    background-size: cover;
+    background-size: 150px auto; /* 50px de largura e altura automática */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #f7f7f7;
+    transition: transform 0.3s ease;
+  }
+.Compesa:hover {
+    background-color: #f7f7f7;
+    transform: scale(1.1);
+  }
+  .Likedin {
+    background-image: url('../imagem/linkedin.png');
+    background-size: cover;
+    background-size: 150px auto; /* 50px de largura e altura automática */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #f7f7f7;
+  }
+  .Likedin:hover {
+    background-color: #f7f7f7;
+  }
+  .background_color{
+    background-color: #f1f1f1;
+  }
+  .Senai {
+    background-image: url('../imagem/senai.png');
+    background-size: cover;
+    background-position: center;
+  }

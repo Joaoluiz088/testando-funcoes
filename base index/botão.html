@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AiServe Company</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background-color: #141414;
+      color: white;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem;
+      background-color: #1e1e1e;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #f3fc05;
+    }
+
+    .main {
+      text-align: center;
+      padding: 5rem 2rem;
+    }
+
+    .main h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #f3fc05;
+    }
+
+    .main p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .buttons {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .buttons button {
+      background-color: #f3fc05;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .buttons button:hover {
+      background-color: #f3fc05;
+    }
+
+    @media (max-width: 768px) {
+      .main h1 {
+        font-size: 2.2rem;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-name"><span>A</span>ISERVE COMPANY</div>
+    <nav>
+      <a href="#servicos">Serviços</a>
+      <a href="#ajuda">Ajuda</a>
+      <a href="#sobre">Sobre Nós</a>
+      <a href="#cadastro">Cadastro</a>
+      <a href="#login">Login</a>
+    </nav>
+  </header>
+
+  <section class="main">
+    <h1>Bem-vindo à AISERVE COMPANY</h1>
+    <p>Simplificamos o comércio eletrônico com soluções inteligentes, práticas e eficazes para o seu negócio. Descubra o futuro do e-commerce com a gente.</p>
+    <div class="buttons">
+      <button onclick="alert('Cadastro')">Cadastrar</button>
+      <button onclick="alert('Login')">Entrar</button>
+    </div>
+  </section>
+</body>
+</html>

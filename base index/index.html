@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página com Botões</title>
+    <style>
+        body{
+            background-color: aliceblue;
+            margin: 0%;
+        }
+        #container-lg {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            height: 110px;
+            background-color: #f1f1f1;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .menu-icon div {
+        width: 28px;
+        height: 4px;
+        background-color: #f1f1f1;
+        border-radius: 2px;
+        }
+
+        .logo-name {
+        font-family: 'Georgia', serif;
+        font-size: 28px;
+        font-weight: bold;
+        color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+
+        .logo-name span {
+        color: #fce220;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn-signup, .btn-login {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-signup {
+            background: #f1f1f1;
+            color: #333;
+        }
+
+        .btn-signup:hover {
+            background: #e0e0e0;
+        }
+
+        .btn-login {
+            background: #ea1d2c;
+            color: white;
+        }
+
+        .btn-login:hover {
+            background: #d01826;
+        }
+  
+    .top-bar {
+      display: flex;
+      align-items: center;
+      background-color: #f9f9f9;
+      padding: 12px 20px;
+      border: 2px solid #fedd4c;
+      border-radius: 30px;
+      margin-bottom: 30px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .icon-search {
+      width: 20px;
+      height: 20px;
+      border: 2px solid #fedd4c;
+      border-radius: 50%;
+      position: relative;
+      margin-right: 10px;
+    }
+
+    .icon-search::after {
+      content: "";
+      width: 10px;
+      height: 2px;
+      background-color: #fedd4c;
+      position: absolute;
+      right: -6px;
+      bottom: -3px;
+      transform: rotate(45deg);
+    }
+
+    .search-bar {
+      flex: 1;
+      border: none;
+      background: transparent;
+      font-size: 16px;
+      outline: none;
+      color: #000;
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 5px;
+    }
+
+    .category {
+      height: 90px;
+      width: 190px;
+      background-color: #fedd4c;
+      border-radius: 12px;
+      padding: 5px;
+      margin-left: 10px;
+      margin-right: 10px;
+      border: none;
+      transition: all 0.3s ease
+    }
+
+    .category:hover{
+        background-color: #fce220;
+        cursor:pointer
+    }
+    h2{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .m{
+        background-color: #f1f1f1;
+        height: 30px;
+        width: auto;
+        border: none;
+        border-radius: 4px;
+        transition: all 0.3s ease
+    }
+
+    .m:hover{
+        background-color: #e0e0e0;
+        cursor: pointer;
+        border: none;
+    }
+    </style>
+</head>
+<body>
+    <div id="container-lg">
+        <div><button><img src="https://cdn-icons-png.flaticon.com/512/6938/6938078.png" class="m"></button></div>
+        <div class="logo-container">
+            <div class="logo-name">
+                <span>A</span>ISERVE COMPANY
+            </div>
+        </div>
+        <div class="button-container">
+            <button class="btn-signup">cadastro</button>
+            <button class="btn-login">entrar</button>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div>
+        <div class="top-bar">
+            <div class="icon-search"></div>
+            <input class="search-bar" placeholder="BUSQUE AQUI O SERVIÇO DO SEU INTERESSE">
+        </div>
+    </div>
+    <div >
+        <h2> Empresas perto de você </h2>
+        <br>
+        <div class="categories">
+            <div><button class="category"><img></button></div>
+            <div><button class="category"><img></button></div>
+            <div><button class="category"><img></button></div>
+            <div><button class="category"><img></button></div>
+            <div><button class="category"><img></button></div>
+            <div><button class="category"><img></button></div>
+          </div>
+    </div>
+</body>
+</html>
