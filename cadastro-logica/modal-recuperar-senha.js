@@ -1,14 +1,14 @@
 // export
-function abrirModal() {
+export function abrirModal() {
     document.getElementById('modal-recuperar').style.display = 'flex';
   }
 
-  function fecharModal() {
+function fecharModal() {
     document.getElementById('modal-recuperar').style.display = 'none';
   }
 
 // export
-  function enviarRecuperacao() {
+export function enviarRecuperacao() {
     const email = document.getElementById('recuperar-email').value;
     if (email.trim() === "") {
       alert("Por favor, digite seu e-mail.");
